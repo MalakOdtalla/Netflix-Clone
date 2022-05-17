@@ -26,7 +26,7 @@ export default function Movie(props){
     <Button variant="primary" onClick=
     {()=>
     {handleShow(props.movieData)}}>
-        Details </Button>
+       View Details </Button>
   </Card.Body>
 </Card>
 {choosenCard && <ModalMovie show={show} handleClose={handleClose} choosenCard={choosenCard} />
