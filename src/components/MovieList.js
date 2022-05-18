@@ -6,7 +6,8 @@ export default function MovieList(props){
       {  props.movies.map((movieData) => {
             return(
                 <>
-                <Movie movieData={movieData}/>
+                <Movie movieData={movieData}  updateMovie={props.updateMovie}/>
+               
                 </>
             )
         })
