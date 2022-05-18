@@ -16,19 +16,22 @@ export default function Movie(props){
 
     return(
         <>
-        <Card style={{ width: '18rem' }}>
-  <Card.Img variant="top" src={props.movieData.poster_path} />
-  <Card.Body>
-    <Card.Title>{props.movieData.title}</Card.Title>
-    <Card.Text>
-      {props.movieData.overview}
-    </Card.Text>
-    <Button variant="primary" onClick=
-    {()=>
-    {handleShow(props.movieData)}}>
-       View Details </Button>
-  </Card.Body>
-</Card>
+        
+        <Card style={{ width: '50rem' }}>
+          <Card.Img variant="top" src={props.movieData.poster_path} />
+          <Card.Body>
+            <Card.Title>{props.movieData.title}</Card.Title>
+            <Card.Text>
+              {props.movieData.overview}
+            </Card.Text>
+            <Card.Text>
+              {props.movieData.release_date}
+            </Card.Text>
+            <Button variant="primary" onClick=
+              {() => { handleShow(props.movieData) }}>
+              View Details </Button>
+          </Card.Body>
+        </Card>
 {choosenCard && <ModalMovie show={show} handleClose={handleClose} choosenCard={choosenCard}  updateMovie={props.updateMovie}/>
 }
         </>
